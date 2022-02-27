@@ -11,7 +11,7 @@
 ### 출처(Origin) 이란?
 - Origin을 알기위해서 URI 구조에 대해 알고 있어야 한다.
 - http://localhost:3000/main?page=1#content
-
+---
 __http://__   Protocol
 __localhost__  Host(Domain 으로 부르기도 한다)
 __:3000__  Port
