@@ -10,9 +10,12 @@ module.exports = function (app) {
 따로 setupProxy.js파일을 생성하여 해결하였고, 밑에 작성한 내용처럼 proxy설정을 추가해 줌으로서 /api로 시작되는 API는 target으로 설정된 서버 URI로 호출하도록 설정 된다.(http-proxy-middleware V1.0 이후임)
 
 ```
-const { createProxyMiddleware } = require('http-proxy-middleware'); const apiProxy = createProxyMiddleware('/api', { target: 'http://www.example.org' }); 
-// \____/ \_____________________________/ // | |
- // context options // 'apiProxy' is now ready to be used as middleware in a server.
+const { createProxyMiddleware } = require('http-proxy-middleware'); 
+const apiProxy = createProxyMiddleware('/api', { target: 'http://www.example.org' }); 
+                                  // \____/ \_____________________________/ // 
+                                        |               |
+                                  // context         options 
+ // 'apiProxy' is now ready to be used as middleware in a server.
 ```
 context로 설정한 주소가 target으로 설정한 서버 쪽 uri로 proxing된다.
 
