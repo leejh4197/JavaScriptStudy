@@ -12,12 +12,12 @@
 - Origin을 알기위해서 URI 구조에 대해 알고 있어야 한다.
 - http://localhost:3000/main?page=1#content
 
-__http://__   Protocol
-__localhost__  Host(Domain 으로 부르기도 한다)
-__:3000__  Port
-__/main__  Path
-__?page=1__  Query String
-__#content__  Fragment
+__http://__   Protocol<br>
+__localhost__  Host(Domain 으로 부르기도 한다)<br>
+__:3000__  Port<br>
+__/main__  Path<br>
+__?page=1__  Query String<br>
+__#content__  Fragment<br>
 
 으로 URI이 구성된다.
 
