@@ -13,7 +13,7 @@ module.exports = function (app) {
 ```
 const { createProxyMiddleware } = require('http-proxy-middleware'); 
 const apiProxy = createProxyMiddleware('/api', { target: 'http://www.example.org' }); 
-                                  // \____/ \_____________________________/ // 
+                                  // \____/      \_____________________________/
                                         |               |
                                   // context         options 
  // 'apiProxy' is now ready to be used as middleware in a server.
