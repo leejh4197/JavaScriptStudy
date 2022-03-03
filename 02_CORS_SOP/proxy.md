@@ -1,3 +1,4 @@
+### Proxy/ http-proxy-middleware
 ```
 const {createProxyMiddleware} = require('http-proxy-middleware');
 module.exports = function (app) {
@@ -10,9 +11,12 @@ module.exports = function (app) {
 따로 setupProxy.js파일을 생성하여 해결하였고, 밑에 작성한 내용처럼 proxy설정을 추가해 줌으로서 /api로 시작되는 API는 target으로 설정된 서버 URI로 호출하도록 설정 된다.(http-proxy-middleware V1.0 이후임)
 
 ```
-const { createProxyMiddleware } = require('http-proxy-middleware'); const apiProxy = createProxyMiddleware('/api', { target: 'http://www.example.org' }); 
-// \____/ \_____________________________/ // | |
- // context options // 'apiProxy' is now ready to be used as middleware in a server.
+const { createProxyMiddleware } = require('http-proxy-middleware'); 
+const apiProxy = createProxyMiddleware('/api', { target: 'http://www.example.org' }); 
+                                  // \____/      \_____________________________/
+                                        |               |
+                                  // context         options 
+ // 'apiProxy' is now ready to be used as middleware in a server.
 ```
 context로 설정한 주소가 target으로 설정한 서버 쪽 uri로 proxing된다.
 
@@ -21,14 +25,15 @@ context로 설정한 주소가 target으로 설정한 서버 쪽 uri로 proxing�
 간단히 말해 주로 보안상의 문제를 방지하기 위해, 직접 통신하지 않고 중계자를 거친다는 개념으로 Proxy라 쓰인다.
 프록시 서버가 클라이언트의 Request(요청)와 서버의 Response(응답)를 연결해주기 때문에 클라이언트(사용자) 입장에서는 서버 대신 프록시 서버를 
 서버 입장에서는 클라이언트 대신 프록시 서버가 있는 느낌이다.
+
 ![](proxy.PNG)
 
-### Forward Proxy와 Reverse Proxy(프롤시 서버를 사용하는 이유)
+### Forward Proxy와 Reverse Proxy(프록시 서버를 사용하는 이유)
 
 1. 시간 절약[Forward Proxy]
     { 클라 <-> 프록시서버 --- 서버 } 
     - 클라이언트가 프록시 서버에 요청한 내용을 프록시 서버에서 캐시로 저장해 두면, 나중에 다시 데이터를 요청할 떄 또다시 데이터를 요청하지 않고 캐시된 데이터를 사용하면 되므로 전송 시간을 절약할 수 있다.
-    (캐시(Cache)란 **자주 사용하는 데이터나 값을 미리 복사해 놓은 입시 장소**를 가르킨다.)
+    (캐시(Cache)란 **자주 사용하는 데이터나 값을 미리 복사해 놓은 시 장소**를 가르킨다.)
     ![](cache.png)
     사진과 같이 캐시는 다른 저장공간에 비해 **저장 공간이 작고 비용이 비싸지만 빠른 성능을 제공하는 저장공간**이다.
     Cache는 다음과 같은 사례에 사용을 고려하면 좋다.
