@@ -28,7 +28,7 @@ context로 설정한 주소가 target으로 설정한 서버 쪽 uri로 proxing�
 
 ![](proxy.PNG)
 
-### Forward Proxy와 Reverse Proxy(프롤시 서버를 사용하는 이유)
+### Forward Proxy와 Reverse Proxy(프록시 서버를 사용하는 이유)
 
 1. 시간 절약[Forward Proxy]
     { 클라 <-> 프록시서버 --- 서버 } 
