@@ -9,7 +9,7 @@ __완료(*)__
 5. Redux
 6. UsteState
 7. 상태관리
-8. 이벤트버블링/캡처링
+8. 이벤트버블링/캡처링(이벤트 위임)
 9. HTTP/HTTPS
 10. Vue/React/Angular
 11. RestfulApi
@@ -22,5 +22,5 @@ __완료(*)__
 18. 라이브러리/프레임워크 차이
 19. 적응형/ 반응형 차이
 20. Redux saga
-21. 가상DOM(실제DOM과 차이, 무엇이 )
+21. 가상DOM(실제DOM과 차이)
 22. 자바스크립트 소수점 계산(https://bigtop.tistory.com/47)
