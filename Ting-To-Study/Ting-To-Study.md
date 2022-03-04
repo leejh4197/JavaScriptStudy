@@ -24,3 +24,4 @@ __완료(*)__
 20. Redux saga
 21. 가상DOM(실제DOM과 차이)
 22. 자바스크립트 소수점 계산(https://bigtop.tistory.com/47)
+23. cloud-front 사용한이유
