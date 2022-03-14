@@ -14,7 +14,7 @@ __완료(*)__
 10. Vue/React/Angular
 11. RestfulApi
 12. 라이프 사이클 메서드
-13. 서버 사이드 랜더링 vs 클라이언트 사이드 렌더링
+13. 서버 사이드 랜더링 vs 클라이언트 사이드 렌더링*
 14. Javascript Hoisting(실행 context)
 15. 동기와 비동기
 16. Context API
