@@ -23,7 +23,7 @@ const FunctionEx = (props) => {
     // render가 실행될때도 실행된다.
     useEffect(function(){
     console.log('%cfunc => useEffect (componentDidMount & componentDidUpdate)'+(++funcId),funcStyle)
-    document.title = number + ' : ' + date;
+    document.title = '김자운바보';
     return function(){
         // cleanup
     console.log('%cfunc => useEffect return (componentDidMount & componentDidUpdate)'+(++funcId),funcStyle)
