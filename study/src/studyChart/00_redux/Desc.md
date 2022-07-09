@@ -67,7 +67,7 @@ const store = createStore(리듀서);
 - createStore<S>(
     reducer: Reducer<S>,
     preloadedState: S,
-    enhancer?: StoreEnhancer<S>
+    enhancer? : StoreEnhancer<S>
   ): Store<S>;
 
 __store__
